@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>Sails Socket Demo - Maangalabs</title>
+	<!-- BootSwatch Paper Theme for Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+	<!-- Open Sans Font -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="chatModule" ng-controller="chatController">
+
+	<table  class="table">
+		<tr class="chat_message" ng-repeat="chat in chatList | orderBy:predicate:reverse | limitTo: 15">
+			<td class="col-md-12 td_class"><strong>{{ chat.user }} : </strong> {{ chat.message }}</td>
+		</tr>
+	</table>
+
+	<div class="navbar navbar-inverse navbar-fixed-bottom" >
+	  <div class="col-lg-12">
+	    
+	    <form class="form_chat">
+	    	<div class="col-lg-4 col-md-3">
+	    		<!-- Username -->
+	      		<input type="text" ng-model = "chatUser" class="form-control" placeholder="TypeYourNameHere">
+          	</div>
+          	
+	    	<div class="col-lg-6 col-md-5">
+	    		<!-- Chat Message -->
+	      		<input type="text" ng-model = "chatMessage" class="form-control" placeholder="TypeYourMessageHere">
+          	</div>
+          	<button class="btn btn-default col-lg-2 col-md-2" ng-click="sendMsg()">Send</button>  
+	    </form>
+	    
+	  </div>
+	</div>
+
+	<!-- Sails Socket Dependancy -->
+	<script type="text/javascript" src="/js/dependencies/sails.io.js"></script>
+	<!-- Angular Js  -->
+	
+</body>
+</html>
