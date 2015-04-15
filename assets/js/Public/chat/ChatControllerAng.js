@@ -1,6 +1,10 @@
-var socketApp = angular.module('socketApp').controller('ChatController',['$http','$log','$scope',function($http,$log,$scope){
+var socketApp = angular.module('ChatModuleAng').controller('ChatControllerAng',['$http','$log','$scope',function($http,$log,$scope){
 	
 
+			$scope.predicate = '-id';
+			$scope.reverse = false;
+			$scope.baseUrl = 'http://localhost:1337';
+			$scope.chatList =[];
 			$scope.getAllchat = function(){
 
 				io.socket.get('/chat/addConversation');
@@ -13,19 +17,20 @@ var socketApp = angular.module('socketApp').controller('ChatController',['$http'
 					 });
 			};
 
+			$scope.getAllchat();
+			$scope.chatUser = "nikkyBot"
+			$scope.chatMessage="";
 
 			io.socket.on('chat',function(obj){
-				//Check whether the verb is created or not
+
 				if(obj.verb === 'created'){
 					$log.info(obj)
 					$scope.chatList.push(obj.data);
-					// Add the data to current chatList
-					// Call $scope.$digest to make the changes in UI
 					$scope.$digest();
 				}
+
 			});
 
-			
 			$scope.sendMsg = function(){
 				$log.info($scope.chatMessage);
 				io.socket.post('/chat/addConversation/',{user:$scope.chatUser,message: $scope.chatMessage});
