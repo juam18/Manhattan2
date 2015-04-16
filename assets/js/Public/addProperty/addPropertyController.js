@@ -8,7 +8,7 @@ angular.module('addPropertyModule').controller('addPropertyController', ['$scope
 
 	$scope.submitAddPropertyForm = function(){
 		$scope.addPropertyForm.loading = true;
-		$http.post('/newproperty', {
+		$http.post('/adicionarPropriedade', {
 			type: $scope.addPropertyForm.type,
 			addressStreet: $scope.addPropertyForm.addressStreet,
 			owner: $scope.addPropertyForm.owner,

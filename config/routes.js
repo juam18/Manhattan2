@@ -32,13 +32,23 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/faleConosco': {
-    view: 'chat'
-  },
+  //'/faleConosco': {
+  //  view: 'chat'
+  //},
 
-  '/adicionarPropriedade': {
-    view: 'addProperty'
-  }
+  //'/adicionarPropriedade': {
+  //  view: 'addProperty'
+  //}
+
+  'GET /faleConosco': { view: 'chat'},
+
+  //'POST /faleConosco': 'UserController.signup',
+
+
+  'GET /adicionarPropriedade': { view: 'addProperty'},
+
+  'POST /adicionarPropriedade': 'PropertyController.insert'
+
 
   /***************************************************************************
   *                                                                          *
