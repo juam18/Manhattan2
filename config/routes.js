@@ -47,7 +47,13 @@ module.exports.routes = {
 
   'GET /adicionarPropriedade': { view: 'addProperty'},
 
-  'POST /adicionarPropriedade': 'PropertyController.insert'
+  'POST /adicionarPropriedade': 'PropertyController.insert',
+
+  'GET /consultarPropriedades': { 
+    controller: "PropertyController",
+    action: "findAll",
+    skipAssets: true,
+  },
 
 
   /***************************************************************************

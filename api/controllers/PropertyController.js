@@ -36,18 +36,24 @@ module.exports = {
 	},
 			
 	findAll: function (req, res) {
-	    Property.findAll().done(function (err, users) {
-	      console.log(users); 
-	    });
+		Property.find().exec(function(err, model){ //.exec() é uma funçao do Waterline
+		  // Error handling
+		  if (err) {
+		    return console.log(err);
+		  // The model was found successfully!
+		  } else {
+		      return res.json(model);
+		  }
+		});
 	  },
 
 	findByOwner: function(req, res) {
 	    var name = req.param('owner');
-	    Property.findByOwner(name).done(function (err, users) {
+	    Property.findByOwner(name).exec(function (err, users) {
 	      if (err) {
-	        res.send(400);
+	        return res.send(400);
 	      } else {
-	        res.send(users);
+	        return res.send(users);
 	      }
 	    });
   	}	
