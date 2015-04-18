@@ -42,7 +42,9 @@ module.exports = {
 		    return console.log(err);
 		  // The model was found successfully!
 		  } else {
-		      return res.json(model);
+		      //return res.json(model);
+		      console.log(model);
+		      return res.view('showProperty.ejs', {model: model});
 		  }
 		});
 	  },
