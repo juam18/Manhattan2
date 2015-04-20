@@ -1,0 +1,35 @@
+
+
+
+<body ng-app='showClientModule' ng-controller='showClientSortController'>
+
+	<table st-table="model" st-safe-src="model" class="table table-striped">
+		<thead>
+		<tr>
+			<th st-sort="getters.name">Nome</th>
+			<th st-sort="surname">Sobrenome</th>
+			<th>Endereço</th>
+			<th>Nacionalidade</th>
+			<th>Naturalidade</th>
+			<th>Estado</th>
+			<th>RG</th>
+			<th>CPF</th>
+			<th>id</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="element in model"> 
+			<td>{{ element.name }}</td>
+			<td>{{ element.surname }}</td>
+			<td>{{ element.addressStreet }}</td>
+			<td>{{ element.nationality }}</td>
+			<td>{{ element.nationalityCity }}</td>
+			<td>{{ element.nationalityState }}</td>
+			<td>{{ element.rg }}</td>
+			<td>{{ element.cpf }}</td>
+			<td>{{ element.idPessoa }}</td>
+		</tr>
+		</tbody>
+	</table>
+
+</body>

@@ -16,11 +16,12 @@ angular.module('addPropertyModule').controller('addPropertyController', ['$scope
 		})
 		.then(function onSuccess(sailsResponse){
 			console.log("Deu ok");
-			window.location = '/property';
+			//window.location = '/property';
 			console.log(sailsResponse);
 		})
 		.catch(function onError(sailsResponse){
 			console.log("Deu M...");
+			console.log(sailsResponse);
 			// Handle known error type(s).
 			// If using sails-disk adpater -- Handle Duplicate Key
 			var idAlreadyInUse = sailsResponse.status == 409;

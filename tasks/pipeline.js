@@ -38,6 +38,10 @@ var jsFilesToInject = [
   'js/public/addProperty/addPropertyController.js',
   'js/public/showProperty/showPropertyModule.js',
   'js/public/showProperty/showPropertyController.js',
+  'js/public/addClient/addClientModule.js',
+  'js/public/addClient/addClientController.js',
+  'js/public/showClient/showClientModule.js',
+  'js/public/showClient/showClientController.js',
   //'js/Public/smartTable/smartTableController.js',
   //'js/**/*.js'
 ];

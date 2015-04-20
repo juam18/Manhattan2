@@ -7261,3 +7261,10 @@ input[type="checkbox"]:disabled:checked:after,
 .carousel-caption h6 {
   color: inherit;
 }
+
+.st-sort-ascent:before{
+    content: '\25B2';
+  }
+.st-sort-descent:before{
+    content: '\25BC';
+  }

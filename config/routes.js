@@ -59,6 +59,20 @@ module.exports.routes = {
     view: 'showProperty'
   },
 
+  'GET /adicionarCliente': { view: 'addClient'},
+
+  'POST /adicionarCliente': 'ClientController.insert',
+
+  'GET /consultarClientes': { 
+    controller: "ClientController",
+    action: "findAll",
+    skipAssets: true,
+  },
+
+  'GET /mostrarClientesConsultados': { 
+    view: 'showClient'
+  },
+
 
 
 
