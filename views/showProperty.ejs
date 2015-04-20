@@ -1,4 +1,22 @@
+<body ng-app='showPropertyModule' ng-controller='showPropertyController'>
 
-<% model.forEach(function(applicant)  { %>
-    <li><%= applicant.addressStreet %> <%= applicant.id %></li>
-<% }); %>
+	<table st-table="model" class="table table-striped">
+		<thead>
+		<tr>
+			<th>Tipo</th>
+			<th>Endereço</th>
+			<th>Proprietário</th>
+			<th>id</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat='element in model'> 
+			<td>{{ element.type }}</td>
+			<td>{{ element.addressStreet }}</td>
+			<td>{{ element.owner }} </td>
+			<td>{{ element.id }}</td>
+		</tr>
+		</tbody>
+	</table>
+
+</body>

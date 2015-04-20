@@ -55,6 +55,12 @@ module.exports.routes = {
     skipAssets: true,
   },
 
+  'GET /mostrarPropriedadesConsultadas': { 
+    view: 'showProperty'
+  },
+
+
+
 
   /***************************************************************************
   *                                                                          *

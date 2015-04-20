@@ -36,6 +36,9 @@ var jsFilesToInject = [
   'js/public/chat/ChatControllerAng.js',
   'js/public/addProperty/addPropertyModule.js',
   'js/public/addProperty/addPropertyController.js',
+  'js/public/showProperty/showPropertyModule.js',
+  'js/public/showProperty/showPropertyController.js',
+  //'js/Public/smartTable/smartTableController.js',
   //'js/**/*.js'
 ];
 

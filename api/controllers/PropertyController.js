@@ -36,15 +36,11 @@ module.exports = {
 	},
 			
 	findAll: function (req, res) {
-		Property.find().exec(function(err, model){ //.exec() é uma funçao do Waterline
-		  // Error handling
+		Property.find().exec(function(err, data){ //.exec() é uma funçao do Waterline
 		  if (err) {
 		    return console.log(err);
-		  // The model was found successfully!
 		  } else {
-		      //return res.json(model);
-		      console.log(model);
-		      return res.view('showProperty.ejs', {model: model});
+		      return res.json(data); //O QUE É RETORNADO POR MODEL.FIND() NAO ESTA EM JSON! TRANSFORMARREMOS
 		  }
 		});
 	  },
