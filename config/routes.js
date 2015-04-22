@@ -32,17 +32,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  //'/faleConosco': {
-  //  view: 'chat'
-  //},
-
-  //'/adicionarPropriedade': {
-  //  view: 'addProperty'
-  //}
+  '/faleConosco': {
+    view: 'chat'
+  },
 
   'GET /faleConosco': { view: 'chat'},
 
-  //'POST /faleConosco': 'UserController.signup',
+  'POST /faleConosco': 'UserController.signup',
 
 
   'GET /adicionarPropriedade': { view: 'addProperty'},
@@ -59,6 +55,27 @@ module.exports.routes = {
     view: 'showProperty'
   },
 
+/***************************************************************************
+  *                                                                          *
+  * Utilizated routes by PASSPORT.JS                                         *
+  *                                                                          *
+  ***************************************************************************/
+
+  'GET /login': 'AuthController.login',
+  'GET /logout': 'AuthController.logout',
+  'GET /register': 'AuthController.register',
+
+  'POST /auth/local': 'AuthController.callback',
+  'POST /auth/local/:action': 'AuthController.callback',
+
+  'GET /auth/:provider': 'AuthController.provider',
+  'GET /auth/:provider/callback': 'AuthController.callback',
+  'GET /auth/:provider/:action': 'AuthController.callback',
+
+
+  'GET /testaLogin': { 
+    view: 'testaLogin'
+  },
 
 
 
