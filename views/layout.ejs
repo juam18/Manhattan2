@@ -60,6 +60,13 @@
                   <li idPessoa="addClient"><a href="/adicionarCliente">Adicionar Clientes</a></li>
                   <li idPessoa="searchClient"><a href="/mostrarClientesConsultados">Consultar Clientes</a></li>
               </ul>
+               <ul class="nav navbar-nav pull-right">
+                <% if (req.session.authenticated) {%>
+                  <li id="logout"><a href="/logout">Deslogar</a></li>
+                <% } else { %>
+                  <li id="login"><a href="/login">Logar</a></li>
+                <% } %>
+              </ul>
           </div>
           <!--/.navbar-collapse -->
       </div>
