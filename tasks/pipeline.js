@@ -28,6 +28,7 @@ var jsFilesToInject = [
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/angular.1.3.js',
+  'js/dependencies/jquery-2.1.3.min.js',
   'js/dependencies/**/*.js',
 
   // All of the rest of your client-side js files
