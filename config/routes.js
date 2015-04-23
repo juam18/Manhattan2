@@ -41,7 +41,7 @@ module.exports.routes = {
   'POST /faleConosco': 'UserController.signup',
 
 
-  'GET /adicionarPropriedade': { view: 'addProperty'},
+  'GET /adicionarPropriedade': { view: 'insideApp/property/addProperty.ejs'},
 
   'POST /adicionarPropriedade': 'PropertyController.insert',
 
@@ -52,10 +52,10 @@ module.exports.routes = {
   },
 
   'GET /mostrarPropriedadesConsultadas': { 
-    view: 'showProperty'
+    view: 'insideApp/property/showProperty'
   },
 
-  'GET /adicionarCliente': { view: 'addClient'},
+  'GET /adicionarCliente': { view: 'insideApp/client/addClient.ejs'},
 
   'POST /adicionarCliente': 'ClientController.insert',
 
@@ -66,7 +66,7 @@ module.exports.routes = {
   },
 
   'GET /mostrarClientesConsultados': { 
-    view: 'showClient'
+    view: 'insideApp/client//showClient'
   },
 
 
