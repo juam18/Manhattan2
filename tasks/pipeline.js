@@ -43,6 +43,7 @@ var jsFilesToInject = [
   'js/public/addClient/addClientController.js',
   'js/public/showClient/showClientModule.js',
   'js/public/showClient/showClientController.js',
+  'js/public/login/loginJS.js',
   //'js/Public/smartTable/smartTableController.js',
   //'js/**/*.js'
 ];
