@@ -1,27 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Add New Client</title>
-
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/angular-toastr.css">
-    <link rel="stylesheet" href="/styles/bootstrap.css">
-    <link rel="stylesheet" href="/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/importer.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <!--STYLES END-->
-
-    <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
-    <script type="text/javascript">
-    window.SAILS_LOCALS = { _csrf: "<%= _csrf %>" };
-    </script>
-
-  </head>
-
   <body ng-app="addClientModule" ng-controller="addClientController" ng-cloak>
 
 
@@ -194,29 +170,4 @@
             </div>
         </footer>
     </div>
-
-
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/dependencies/angular.1.3.js"></script>
-    <script src="/js/dependencies/jquery-2.1.3.min.js"></script>
-    <script src="/js/dependencies/angular-toastr.js"></script>
-    <script src="/js/dependencies/bootstrap.js"></script>
-    <script src="/js/dependencies/bootstrap.min.js"></script>
-    <script src="/js/dependencies/compareTo.module.js"></script>
-    <script src="/js/dependencies/smart-table.js"></script>
-    <script src="/js/dependencies/smart-table.min.js"></script>
-    <script src="/js/public/chat/ChatModuleAng.js"></script>
-    <script src="/js/public/chat/ChatControllerAng.js"></script>
-    <script src="/js/public/addProperty/addPropertyModule.js"></script>
-    <script src="/js/public/addProperty/addPropertyController.js"></script>
-    <script src="/js/public/showProperty/showPropertyModule.js"></script>
-    <script src="/js/public/showProperty/showPropertyController.js"></script>
-    <script src="/js/public/addClient/addClientModule.js"></script>
-    <script src="/js/public/addClient/addClientController.js"></script>
-    <script src="/js/public/showClient/showClientModule.js"></script>
-    <script src="/js/public/showClient/showClientController.js"></script>
-    <script src="/js/public/login/loginJS.js"></script>
-    <!--SCRIPTS END-->
-  </body>
-</html>
+</body>

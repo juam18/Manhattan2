@@ -41,7 +41,19 @@ module.exports.routes = {
   'POST /faleConosco': 'UserController.signup',
 
 
-  'GET /adicionarPropriedade': { view: 'insideApp/property/addProperty.ejs'},
+
+/***************************************************************************
+  *                                                                          *
+  * INSIDE APP ROUTES  - AFTER LOGGED IN                                     *
+  *                                                                          *
+  ***************************************************************************/
+
+  'GET /adicionarPropriedade': { 
+    view: 'app/property/addProperty.ejs',
+    locals: {
+      layout: 'app/appLayout.ejs'
+    }
+  },
 
   'POST /adicionarPropriedade': 'PropertyController.insert',
 
@@ -52,10 +64,18 @@ module.exports.routes = {
   },
 
   'GET /mostrarPropriedadesConsultadas': { 
-    view: 'insideApp/property/showProperty'
+    view: 'app/property/showProperty',
+    locals: {
+      layout: 'app/appLayout.ejs'
+    }
   },
 
-  'GET /adicionarCliente': { view: 'insideApp/client/addClient.ejs'},
+  'GET /adicionarCliente': { 
+    view: 'app/client/addClient.ejs',
+    locals: {
+      layout: 'app/appLayout.ejs'
+    }
+  },
 
   'POST /adicionarCliente': 'ClientController.insert',
 
@@ -66,8 +86,12 @@ module.exports.routes = {
   },
 
   'GET /mostrarClientesConsultados': { 
-    view: 'insideApp/client//showClient'
+    view: 'app/client/showClient',
+    locals: {
+      layout: 'app/appLayout.ejs'
+    }
   },
+
 
 
 /***************************************************************************
@@ -87,10 +111,6 @@ module.exports.routes = {
   'GET /auth/:provider/callback': 'AuthController.callback',
   'GET /auth/:provider/:action': 'AuthController.callback',
 
-
-  'GET /testaLogin': { 
-    view: 'testaLogin'
-  },
 
 
   /***************************************************************************
